@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+ 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>Bookmark Manager</header>
+  <main>
+    <section class="form-container">
+      <input type="text" id="bookmarkName" placeholder="Bookmark Name">
+      <input type="url" id="bookmarkUrl" placeholder="Website URL">
+      <span class="error-message" id="urlErrorMessage">Please enter a valid URL starting with http:// or https://</span>
+      <button id="addBookmarkButton">Add Bookmark</button>
+    </section>
+    <table>
+      <thead>
+        <tr>
+          <th>Index</th>
+          <th>Website Name</th>
+          <th>Visit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="bookmarkTableBody"></tbody>
+    </table>
+
+    
+    <dialog id="rulesDialog">
+      <h3>Rules for a valid URL:</h3>
+      <ul>
+        <li>The URL must start with "http://" or "https://".</li>
+        <li>It must be a valid web address.</li>
+      </ul>
+      <button id="closeDialogButton">Close</button>
+    </dialog>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
